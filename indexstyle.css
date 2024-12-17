@@ -1,0 +1,389 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+
+/* 
+################################################################
+################################################################
+################################################################
+################################################################
+################################################################
+################################################################
+################################################################
+################################################################
+################################################################
+################################################################
+################################################################
+################################################################
+################################################################
+ */
+
+
+
+
+ * {
+    box-sizing: border-box;
+ }
+
+:root {
+    --main-color: #002dc3;
+    --accent-color: #4570ff;
+    --interaction-color-bg: #f3f3f3;
+    --interaction-color:#383838;
+    --main-bg-color: #D3D3FF;
+    --table-border-color: #929292;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f3f3;
+    max-width: 100%;
+}
+
+body {
+    height: 89vh;
+    max-width: 100%;
+    min-width: 825px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #161616;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 0.5em 0;
+    padding: 0;
+}
+
+.vl {
+    border-left: 1px solid #ccc;
+    margin-left: 1rem;
+}
+
+button {
+    border: none;
+    background-color: #ffffff;
+
+}
+
+button:hover {
+    border-radius: 5px;
+    background-color: var(--main-bg-color);
+    cursor: pointer;
+}
+
+/*          Navbar CSS          */
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.7rem 0; 
+}
+
+.nav-item {
+    font-size: 0.9rem;   
+    text-decoration: none;
+    color: #000;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+}
+
+.nav-item:hover {
+    background-color: #D3D3FF;
+    color: var(--main-color);
+}
+
+#upgrade {
+    color: var(--accent-color);
+    border: solid var(--accent-color) 1px;
+    border-radius: 5px;  
+    padding: 0.2rem 0.7rem;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+#upgrade span {
+    transition: transform 0.4s;
+}
+
+#upgrade:hover {
+    background-color: var(--accent-color);
+    color: #ffffff; 
+}
+
+#upgrade:hover span {
+    transform: translateY(-3px);
+}
+
+#nav-center {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#nav-end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu span {
+    transition: transform 0.5s;
+}
+
+
+#menu:hover span {
+    transform: rotate(90deg);
+    /* transition: transform 0.5s; */
+}
+
+
+
+/* -------------------- Universal ---------------------------- */
+
+.workspace {
+    font-family: "Inter", sans-serif;
+    background-color: #fff;
+    width: 80%;
+    border-top-left-radius: 5px;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.universal {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 18%;
+    height: 100%;
+    border-top-right-radius: 5px;
+}
+
+.universal-icon {
+    margin-right: 0.5rem;
+}
+
+.u-item {
+    height: 2rem;
+    padding: 0.2rem 0.5rem;
+    color: var(--interaction-color);
+    display: flex;
+    align-items: center;
+    margin: 0.1em 0.2em;
+    border-radius: 5px;
+}
+
+.u-item:hover {
+    background-color: var(--interaction-color-bg);
+}
+
+#managespace {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+/* ---------------------- Workspace Area -------------------- */
+
+#projectbar {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 0 1.5rem 2rem;
+    width: 80%;
+    max-width: 100%;
+}
+
+#newtask {
+    display: flex;
+    align-items: center;    
+    border: solid var(--accent-color) 1px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: var(--accent-color);
+}
+
+#newtask:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+#gantt {
+    transform: rotate(-90deg);
+}
+
+#kanban {
+    transform: rotate(180deg);
+}
+
+.viewicons {
+    color: var(--interaction-color);
+}
+
+#leftmostbtn {
+    margin-left: 0.4rem;
+}
+
+.headerarea {
+    padding: 1rem 0 0 2rem;
+}
+
+/* -------------- TABLE -------------------- */
+
+.grouptitle {
+    padding: 0.5rem 0 0.5rem 2rem;
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    display: block;
+}
+
+
+.task-table {
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin-left: 2rem;
+}
+
+.todo-group {
+    overflow-y: scroll;
+    height: 400px;
+}
+
+.task-table:last-child {
+    border-left: none;
+}
+
+.last-row {
+    border-right: none;
+}
+
+table, th, td {
+    border: 1px solid var(--table-border-color);
+    color: var(--interaction-color);
+}
+
+.placeholder-row {
+    border-left: 5px solid #9cb3ff;
+}
+
+th, td {
+    vertical-align: middle;
+}
+
+th {
+    padding: 0.7rem 1rem;
+}
+
+td {
+    padding: 0.2rem 1rem;
+}
+
+.checkmark-wrap {
+    border-left: var(--accent-color) solid 5px;
+}
+
+.checkmark {
+    width: 15px;
+    height: 15px;
+}
+
+.person-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.4rem;    
+    border: none;
+}
+
+.tabletext {
+    border: 1px solid rgba(0,0,0,0);
+    padding: 0.3em 0.3em;
+    font-size: 1rem;
+    color: var(--interaction-color);
+}
+
+.tabletext:hover {
+    border: 1px solid var(--table-border-color);
+    border-radius: 5px;
+}
+
+.tabletext[type=text]:focus {
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--accent-color);
+    transition: border 0.1s;
+}
+
+.placeholder-textfield {
+    width: 300px;
+}
+
+.status {
+    background-color: #ffb937;
+    color: #ffffff;
+}
+
+#task {
+    width: 250px;
+}

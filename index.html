@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="indexstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>FluDo - Your Field Management Platform</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div>
+            <a href="#" class="nav-item" id="logo">FluDo</a>
+        </div>
+        <div id="nav-center">
+            <a href="#" class="nav-item"><span class="material-symbols-outlined">map</span></a>
+            <a href="#" class="nav-item"><span class="material-symbols-outlined">timeline</span></a>
+            <a href="#" class="nav-item"><span class="material-symbols-outlined">badge</span></a>
+        </div>
+        <div id="nav-end">
+            <a href="#" class="nav-item" id="upgrade"><span class="material-symbols-outlined" id="upgradearrow">arrow_upward</span>Upgrade</a>
+            <a href="#" class="nav-item" id="menu"><span class="material-symbols-outlined">menu</span></a>
+        </div>
+    </nav>
+    <div id="managespace">
+        <section class="universal">
+            <a href="#" class="u-item"><span class="material-symbols-outlined universal-icon">home</span>Home</a>
+            <a href="#" class="u-item"><span class="material-symbols-outlined universal-icon">full_coverage</span>Overview</a>
+            <hr/>
+            <a href="#" class="u-item"><span class="material-symbols-outlined universal-icon" id="favoriteStar">star</span>Favorites</a>
+            <hr/>
+            <a href="#" class="u-item">Projects</a>
+        </section>
+        <section class="workspace">
+            <div class="headerarea">
+                <h1>Project Name</h1>
+            </div>
+            <div id="projectbar">
+                <button id="newtask"><span class="material-symbols-outlined">add</span>New Task</button>
+                <div class="vl"></div>
+                <button class="viewicons" id="leftmostbtn"><span class="material-symbols-outlined">table_view</span></button>
+                <button class="viewicons"><span class="material-symbols-outlined" id="gantt">waterfall_chart</span></button>
+                <button class="viewicons"><span class="material-symbols-outlined" id="kanban">insert_chart</span></button>
+            </div>
+            <section class="todo-group">
+                <h1 class="grouptitle">To-Do</h1>
+                <table class="task-table" id="tasktable">
+                    <thead>
+                        <tr>
+                            <th class="checkmark-wrap"></th>
+                            <th id="task">Task</th>
+                            <th>Owner</th>
+                            <th>Status</th>
+                            <th>Deadline</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskbody">
+                        <tr>
+                            <td class="checkmark-wrap">
+                                <label>
+                                    <input type="checkbox" class="checkmark" name="rowOne">
+                                </label>
+                            </td>
+                            <td><input type="text" name="taskname" class="tabletext"></td>
+                            <td>Tyler</td>
+                            <td class="status">In Progress</td>
+                            <td>June 2025</td>
+                        </tr>
+                        <!-- <tr>
+                            <td class="placeholder-row">
+                                <label>
+                                    <input type="checkbox" class="checkmark" disabled>
+                                </label>
+                            </td>
+                            <td class="last-row"><input type="text" name="taskname" placeholder="Add New Task" class="tabletext placeholder-textfield"></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
